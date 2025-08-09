@@ -18,7 +18,7 @@ const FieldEditor: React.FC<FieldEditorProps> = ({
   onMoveUp,
   onMoveDown,
 }) => {
-  // Generic field property updater
+ 
   const handleChange = (key: keyof FieldConfig, value: any) => {
     onChange({ ...field, [key]: value });
   };
@@ -29,7 +29,6 @@ const FieldEditor: React.FC<FieldEditorProps> = ({
     value: ValidationRules[K] | undefined
   ) => {
     const newValidation: ValidationRules = { ...(field.validation || {}) };
-    // assign via any to satisfy TS for dynamic key assignment
     (newValidation as any)[key] = value;
     onChange({ ...field, validation: newValidation });
   };
@@ -112,7 +111,6 @@ const FieldEditor: React.FC<FieldEditorProps> = ({
         </label>
       </div>
 
-      {/* Default value */}
       <div style={{ marginTop: 10 }}>
         <label>
           Default Value:&nbsp;
@@ -125,7 +123,6 @@ const FieldEditor: React.FC<FieldEditorProps> = ({
         </label>
       </div>
 
-      {/* TEXT validations */}
       {isTextField && (
         <fieldset style={{ marginTop: 10, padding: 10 }}>
           <legend>Text Validation</legend>
@@ -166,7 +163,7 @@ const FieldEditor: React.FC<FieldEditorProps> = ({
         </fieldset>
       )}
 
-      {/* NUMBER validations */}
+      
       {isNumberField && (
         <fieldset style={{ marginTop: 10, padding: 10 }}>
           <legend>Number Validation</legend>
@@ -193,7 +190,6 @@ const FieldEditor: React.FC<FieldEditorProps> = ({
         </fieldset>
       )}
 
-      {/* DATE validations */}
       {isDateField && (
         <fieldset style={{ marginTop: 10, padding: 10 }}>
           <legend>Date Constraints</legend>

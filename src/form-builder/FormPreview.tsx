@@ -59,8 +59,7 @@ const FormPreview: React.FC<FormPreviewProps> = ({ form }) => {
     form.fields.forEach(field => {
       if (field.isDerived && field.derived) {
         try {
-          // For example, assume expression is a JS formula string referencing parent fields by name
-          // Evaluate formula with current values of parents
+         
           const formula = field.derived.expression;
           const parents = field.derived.parents;
 
@@ -70,10 +69,7 @@ const FormPreview: React.FC<FormPreviewProps> = ({ form }) => {
             context[p] = values[p];
           });
 
-          // Use Function constructor to evaluate formula safely (basic eval)
-          // e.g. formula = "parents['dob'] ? calculateAge(parents['dob']) : ''"
-          // Simplify formula as per your design
-          // Here, we replace variable names in formula with actual values for a simple approach
+          
           let evalFormula = formula;
           Object.entries(context).forEach(([key, val]) => {
             evalFormula = evalFormula.replaceAll(key, JSON.stringify(val));

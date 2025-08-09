@@ -5,12 +5,14 @@ import FormBuilder from './form-builder/FormBuilder';
 import FormPreview from './form-builder/FormPreview';
 import MyForms from './form-builder/MyForms';
 import { FormSchema } from './types';
+import Home from './Home';
 
 // 2. App Component with routing
 const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/create" element={<FormBuilder />} />
         <Route path="/myforms" element={<MyForms />} />
         <Route path="/preview/:formName" element={<FormPreviewWrapper />} />
