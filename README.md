@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+Form Builder
+A dynamic form builder built with React & TypeScript that allows you to create forms, preview them, and store form configurations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Create Forms – Add fields of different types (text, number, textarea, select, radio, checkbox, date).
 
-## Available Scripts
+Validation Rules – Required fields, min/max length, email, password rules, numeric/date ranges.
 
-In the project directory, you can run:
+Derived Fields – Auto-calculated fields based on other field values.
 
-### `npm start`
+Form Preview – See exactly how the form will look and validate inputs before submission.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Form Storage – Save and manage forms for later use.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Netlify Ready – Easily deployable with a single click.
 
-### `npm test`
+Tech Stack
+React (Frontend framework)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TypeScript (Static typing)
 
-### `npm run build`
+React Router (Navigation)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+LocalStorage (Data persistence)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Pages
+/ – Homepage with navigation buttons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+/create – Form Builder UI
 
-### `npm run eject`
+/myforms – List of saved forms
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+/preview/:formName – Preview the form with live validation
